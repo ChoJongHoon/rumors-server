@@ -45,10 +45,12 @@ exports.selectPosts = async ({ latitude, longitude, userNo }) => {
       await connection.rollback();
       connection.release();
       console.log("Query Error");
+      console.log(err);
       return err;
     }
   } catch (err) {
     console.log("DB Error");
+    console.log(err);
     return err;
   }
 };
@@ -91,10 +93,12 @@ exports.selectMyPosts = async ({ userNo }) => {
       await connection.rollback();
       connection.release();
       console.log("Query Error");
+      console.log(err);
       return err;
     }
   } catch (err) {
     console.log("DB Error");
+    console.log(err);
     return err;
   }
 };
@@ -137,10 +141,12 @@ exports.selectMyLikePosts = async ({ userNo }) => {
       await connection.rollback();
       connection.release();
       console.log("Query Error");
+      console.log(err);
       return err;
     }
   } catch (err) {
     console.log("DB Error");
+    console.log(err);
     return err;
   }
 };
@@ -168,10 +174,12 @@ exports.insertPost = async ({
       await connection.rollback();
       connection.release();
       console.log("Query Error");
+      console.log(err);
       return err;
     }
   } catch (err) {
     console.log("DB Error");
+    console.log(err);
     return err;
   }
 };
@@ -200,10 +208,12 @@ exports.insertLike = async ({ postNo, userNo, latitude, longitude }) => {
       await connection.rollback();
       connection.release();
       console.log("Query Error");
+      console.log(err);
       return err;
     }
   } catch (err) {
     console.log("DB Error");
+    console.log(err);
     return err;
   }
 };
@@ -236,10 +246,12 @@ exports.deleteLike = async ({ postNo, userNo }) => {
       await connection.rollback();
       connection.release();
       console.log("Query Error");
+      console.log(err);
       return err;
     }
   } catch (err) {
     console.log("DB Error");
+    console.log(err);
     return err;
   }
 };
@@ -268,10 +280,12 @@ exports.selectComments = async ({ postNo }) => {
       await connection.rollback();
       connection.release();
       console.log("Query Error");
+      console.log(err);
       return err;
     }
   } catch (err) {
     console.log("DB Error");
+    console.log(err);
     return err;
   }
 };
@@ -300,10 +314,12 @@ exports.insertComment = async ({ postNo, userNo, text }) => {
       await connection.rollback();
       connection.release();
       console.log("Query Error");
+      console.log(err);
       return err;
     }
   } catch (err) {
     console.log("DB Error");
+    console.log(err);
     return err;
   }
 };
@@ -325,10 +341,12 @@ exports.selectLikes = async ({ postNo }) => {
       await connection.rollback();
       connection.release();
       console.log("Query Error");
+      console.log(err);
       return err;
     }
   } catch (err) {
     console.log("DB Error");
+    console.log(err);
     return err;
   }
 };

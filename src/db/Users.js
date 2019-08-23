@@ -28,10 +28,12 @@ exports.register = async ({ userId, userPw, userName }) => {
       await connection.rollback();
       connection.release();
       console.log("Query Error");
+      console.log(err);
       return err;
     }
   } catch (err) {
     console.log("DB Error");
+    console.log(err);
     return err;
   }
 };
@@ -50,10 +52,12 @@ exports.validatePassword = async (userId, userPw) => {
       await connection.rollback();
       connection.release();
       console.log("Query Error");
+      console.log(err);
       return err;
     }
   } catch (err) {
     console.log("DB Error");
+    console.log(err);
     return err;
   }
 };
@@ -99,10 +103,12 @@ group by users.user_no
       await connection.rollback();
       connection.release();
       console.log("Query Error");
+      console.log(err);
       return err;
     }
   } catch (err) {
     console.log("DB Error");
+    console.log(err);
     return err;
   }
 };
@@ -135,10 +141,12 @@ group by posts.post_no
       await connection.rollback();
       connection.release();
       console.log("Query Error");
+      console.log(err);
       return err;
     }
   } catch (err) {
     console.log("DB Error");
+    console.log(err);
     return err;
   }
 };
@@ -157,10 +165,12 @@ exports.selectUserById = async userId => {
       await connection.rollback();
       connection.release();
       console.log("Query Error");
+      console.log(err);
       return err;
     }
   } catch (err) {
     console.log("DB Error");
+    console.log(err);
     return err;
   }
 };
@@ -174,6 +184,7 @@ exports.generateToken = async userId => {
         [userId]
       );
       connection.release();
+      console.log(rows);
       const payload = {
         userNo: rows[0].user_no,
         userId: rows[0].user_id,
@@ -186,10 +197,12 @@ exports.generateToken = async userId => {
       await connection.rollback();
       connection.release();
       console.log("Query Error");
+      console.log(err);
       return err;
     }
   } catch (err) {
     console.log("DB Error");
+    console.log(err);
     return err;
   }
 };
