@@ -20,6 +20,7 @@
     "koa-router": "^7.4.0",
     "koa-send": "^5.0.0",
     "koa-static": "^5.0.0",
+    "lodash": "^4.17.15",
     "mysql2": "^1.6.5",
     "nodemailer": "^6.2.1",
     "nodemailer-smtp-pool": "^2.8.3",
